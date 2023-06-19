@@ -1,0 +1,23 @@
+[package]
+name = "unimpl"
+version = "0.1.2"
+edition = "2021"
+authors = ["Wiktor Kwapisiewicz <wiktor@metacode.biz>"]
+description = "Better unimplemented! macro for function definitions"
+repository = "https://github.com/wiktor-k/unimpl"
+license = "MIT OR Apache-2.0"
+keywords = ["testing"]
+categories = ["development-tools::testing"]
+exclude = [".github"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1.0.28"
+syn = { version = "2.0.18", features = ["full"] }
+
+[dev-dependencies]
+panic-message = "0.3.0"
